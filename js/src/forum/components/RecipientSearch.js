@@ -24,7 +24,7 @@ export default class RecipientSearch extends Search {
       this.value('');
     }
 
-    const loading = this.value() && this.value().length >= 3;
+    const loading = this.value() && this.value().length >= 1;
 
     this.sources ??= this.sourceItems().toArray();
 

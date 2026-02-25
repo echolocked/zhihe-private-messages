@@ -4,7 +4,7 @@ import username from 'flarum/common/helpers/username';
 
 export default class UserSearchSource {
   view(query) {
-    if (query.length < 3 || this.loading) return;
+    if (query.length < 1 || this.loading) return;
 
     app.cache.conversationResults ??= [];
 
