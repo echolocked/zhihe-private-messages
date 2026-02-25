@@ -6,15 +6,16 @@ Private messages (PM's) are also known as "direct messages" (DM's). (e.g. "Send 
 
 ![Flarum Private Messages screenshot](https://raw.githubusercontent.com/neoncube2/flarum-private-messages/main/resources/screenshot.jpg)
 
+> **Note:** This repository is a fork of `neoncube/flarum-private-messages`. It patches the source code to allow searching for users with **only 1 character** (instead of the default 3 characters). This is particularly useful for Chinese nicknames!
+
 ## Installation
 
-	composer remove kyrne/whisper --no-update
-	composer remove littlecxm/whisper --no-update
-    composer require neoncube/flarum-private-messages:"*"
+	composer config repositories.zhihe-private-messages vcs https://github.com/echolocked/zhihe-private-messages.git
+    composer require zhihe/flarum-private-messages:dev-main
 
 ## Updating
 
-    composer update neoncube/flarum-private-messages
+    composer update zhihe/flarum-private-messages
     php flarum migrate
     php flarum cache:clear
 
